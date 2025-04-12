@@ -15,11 +15,6 @@ This system is ideal for small to medium-sized travel agencies seeking to digiti
 - **Booking History**: Access records of past bookings and transaction details.
 - **Profile Management**: Update personal details and manage credentials.
 
-### Admin Features
-- **Admin Login**: Secure access for administrators.
-- **Manage Destinations**: Add, update, or remove tourist destinations and packages.
-- **Manage Users**: View and manage registered users.
-- **View Bookings**: Track bookings made by users.
 
 ## Technologies Used
 
@@ -32,7 +27,7 @@ This system is ideal for small to medium-sized travel agencies seeking to digiti
 
 ### Prerequisites
 - Java Development Kit (JDK) installed
-- NetBeans IDE (or any Java-compatible IDE)
+- VS IDE (or any Java-compatible IDE)
 - MySQL Server and MySQL Workbench
 
 ### Steps
@@ -50,15 +45,14 @@ This system is ideal for small to medium-sized travel agencies seeking to digiti
 3. **Set Up the MySQL Database**
    - Open MySQL Workbench.
    - Create a new database named `travel_tourism_db`.
-   - Import the SQL script provided in the repository (if available) or manually create tables as per code references.
+   - Import the SQL script provided in the repository.
 
 4. **Configure Database in Code**
    - Open the Java file where database connection is set up (typically a `Conn.java`).
    - Update database URL, username, and password according to your local setup.
 
 5. **Build and Run the Project**
-   - Right-click on the project in NetBeans.
-   - Select `Clean and Build`.
-   - Then click `Run` > `Run Project`.
+   - Right-click on the project in VISUAL STUDIO.
+   - Then click `Run` file which contains `main.java`.
 
 
