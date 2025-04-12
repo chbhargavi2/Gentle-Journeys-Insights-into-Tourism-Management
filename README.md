@@ -45,7 +45,7 @@ This system is ideal for small to medium-sized travel agencies seeking to digiti
 3. **Set Up the MySQL Database**
    - Open MySQL Workbench.
    - Create a new database named `travel_tourism_db`.
-   - Import the SQL script provided in the repository.
+   - Import the SQL script provided in the repository(refer to TMS.txt).
 
 4. **Configure Database in Code**
    - Open the Java file where database connection is set up (typically a `Conn.java`).
