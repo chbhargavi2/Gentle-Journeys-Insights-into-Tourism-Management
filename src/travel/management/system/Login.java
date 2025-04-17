@@ -22,7 +22,7 @@ public class Login extends JFrame implements ActionListener{
 	public Login() {
             
 	setBackground(new Color(255, 255, 204));	
-        setBounds(550, 250, 700, 400);
+        setBounds(450, 175, 700, 400);
 		
         panel = new JPanel();
 	panel.setBackground(Color.WHITE);
