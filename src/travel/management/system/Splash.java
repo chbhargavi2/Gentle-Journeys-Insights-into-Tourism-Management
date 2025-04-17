@@ -11,7 +11,7 @@ public class Splash {
         int i;
         int x=1;
         for(i=2; i<=600; i+=10, x+=7){
-            f1.setLocation(900 - ((i+x)/2), 500 - (i/2));
+            f1.setLocation(800 - ((i+x)/2), 400 - (i/2));
             f1.setSize(i+x,i);
             try{
                 Thread.sleep(10);
