@@ -1,17 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package travel.management.system;
-
 
 import java.awt.BorderLayout;
 import java.awt.*;
 import java.awt.EventQueue;
-
 import javax.swing.border.EmptyBorder;
-
 import java.awt.Font;
 import java.awt.Image;
 import java.sql.*;	
@@ -21,9 +13,7 @@ import java.awt.event.ActionEvent;
 public class ViewPackage extends JFrame {
 	private JPanel contentPane;
         Choice c1;
-	/**
-	 * Launch the application.
-	 */
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -38,7 +28,7 @@ public class ViewPackage extends JFrame {
 	}
 
 	public ViewPackage(String username)  {
-		setBounds(580, 220, 850, 450);
+		setBounds(400, 220, 850, 450);
 		contentPane = new JPanel();
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -139,7 +129,7 @@ public class ViewPackage extends JFrame {
 		}); 
 		btnExit.setBounds(160, 350, 120, 30);
                 btnExit.setBackground(Color.BLACK);
-                btnExit.setForeground(Color.WHITE);
+                btnExit.setForeground(Color.BLACK);
 		contentPane.add(btnExit);
                 
                 getContentPane().setBackground(Color.WHITE);
