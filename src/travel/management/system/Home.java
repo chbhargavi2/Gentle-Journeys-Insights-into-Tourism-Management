@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package travel.management.system;
 
 import java.awt.*;
-import javax.swing.*;
 import java.awt.event.*;
-
+import javax.swing.*;
 
 public class Home extends JFrame{
     String username;
@@ -17,7 +11,7 @@ public class Home extends JFrame{
     }
     
     public Home(String username) {
-        super("Travel and Tourism Management System");
+        super("Gentle Journeys Insights into Tourism Management");
 	this.username = username;
         setForeground(Color.CYAN);
         setLayout(null); 
@@ -30,10 +24,10 @@ public class Home extends JFrame{
 	NewLabel.setBounds(0, 0, 1950, 1000); 
         add(NewLabel);
         
-        JLabel l1 = new JLabel("Gentel Journeys");
-	l1.setForeground(Color.black);
+        JLabel l1 = new JLabel("Gentle Journeys");
+	l1.setForeground(Color.BLACK);
         l1.setFont(new Font("Tahoma", Font.PLAIN, 55));
-	l1.setBounds(600, 60, 1000, 100);
+	l1.setBounds(590, 60, 1000, 100);
 	NewLabel.add(l1);
 		
 		
@@ -209,7 +203,7 @@ public class Home extends JFrame{
         mi13.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent ae){
                 try{
-                    Runtime.getRuntime().exec("notepad.exe");
+                    Runtime.getRuntime().exec(new String[] { "open", "-a", "TextEdit" });
                 }catch(Exception e){ }
             }
 	});
@@ -218,7 +212,7 @@ public class Home extends JFrame{
         mi14.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent ae){
                 try{
-                    Runtime.getRuntime().exec("calc.exe");
+                    Runtime.getRuntime().exec(new String[] { "open", "-a", "Calculator" });
                 }catch(Exception e){ }
             }
 	});
@@ -235,8 +229,6 @@ public class Home extends JFrame{
                 new About().setVisible(true);
             }
 	});
-        
-        
         
         setExtendedState(JFrame.MAXIMIZED_BOTH); 
 	setVisible(true);
