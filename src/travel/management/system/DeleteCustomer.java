@@ -1,17 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package travel.management.system;
-
 
 import java.awt.BorderLayout;
 import java.awt.*;
 import java.awt.EventQueue;
-
 import javax.swing.border.EmptyBorder;
-
 import java.awt.Font;
 import java.awt.Image;
 import java.sql.*;	
@@ -21,9 +13,6 @@ import java.awt.event.ActionEvent;
 public class DeleteCustomer extends JFrame {
 	private JPanel contentPane;
         Choice c1;
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -38,7 +27,7 @@ public class DeleteCustomer extends JFrame {
 	}
 
 	public DeleteCustomer() throws SQLException {
-		setBounds(580, 220, 850, 550);
+		setBounds(400, 220, 850, 550);
 		contentPane = new JPanel();
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -139,15 +128,14 @@ public class DeleteCustomer extends JFrame {
 		JLabel l9 = new JLabel();
 		l9.setBounds(271, 390, 200, 14);
 		contentPane.add(l9);
-
-		
 		JButton b1 = new JButton("Check");
 		b1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
                             Conn c = new Conn();
                            
                             try{
-                                ResultSet rs = c.s.executeQuery("select * from customer where username = 'rajanrai'");
+				String s1 = c1.getSelectedItem();
+                                ResultSet rs = c.s.executeQuery("select * from customer where username = '"+ s1 +"'");
                                 if(rs.next()){
                                     l2.setText(rs.getString(2));  
                                     l3.setText(rs.getString(3));
@@ -163,20 +151,19 @@ public class DeleteCustomer extends JFrame {
 		});
 		b1.setBounds(425, 70, 80, 22);
                 b1.setBackground(Color.BLACK);
-                b1.setForeground(Color.WHITE);
+                b1.setForeground(Color.BLACK);
 		contentPane.add(b1);
 		
 
 		JButton btnNewButton = new JButton("Delete");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-                            Conn c = new Conn();
-                           
+                            Conn c = new Conn();        
                           
                             try{
 	    			String s1 = c1.getSelectedItem(); 
                                 
-                                String q1 = "update from customer where username = '"+s1+"'";
+                                String q1 = "delete from customer where username = '"+s1+"'";
                                 c.s.executeUpdate(q1);
                                 
 	    			JOptionPane.showMessageDialog(null, "Customer Detail Deleted Successfully");
@@ -191,7 +178,7 @@ public class DeleteCustomer extends JFrame {
 		});
 		btnNewButton.setBounds(100, 430, 120, 30);
                 btnNewButton.setBackground(Color.BLACK);
-                btnNewButton.setForeground(Color.WHITE);
+                btnNewButton.setForeground(Color.BLACK);
 		contentPane.add(btnNewButton);
 		
 		JButton btnExit = new JButton("Back");
@@ -202,7 +189,7 @@ public class DeleteCustomer extends JFrame {
 		}); 
 		btnExit.setBounds(260, 430, 120, 30);
                 btnExit.setBackground(Color.BLACK);
-                btnExit.setForeground(Color.WHITE);
+                btnExit.setForeground(Color.BLACK);
 		contentPane.add(btnExit);
                 
                 getContentPane().setBackground(Color.WHITE);
