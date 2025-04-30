@@ -1,15 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package travel.management.system;
 
-
 import java.awt.*;
-import javax.swing.*;
-import java.awt.event.*;
 import java.sql.*;
+import javax.swing.*;
 
 public class Loading extends JFrame implements Runnable {
 
@@ -53,7 +46,7 @@ public class Loading extends JFrame implements Runnable {
             this.username = username;
             th = new Thread((Runnable) this);
 
-            setBounds(600, 300, 600, 400);
+            setBounds(450, 300, 600, 400);
             contentPane = new JPanel();
             contentPane.setBackground(new Color(51,204, 255));
             setContentPane(contentPane);
