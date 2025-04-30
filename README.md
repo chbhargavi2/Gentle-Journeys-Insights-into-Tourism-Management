@@ -21,13 +21,13 @@ This system is ideal for small to medium-sized travel agencies seeking to digiti
 - **Programming Language**: Java
 - **UI Libraries**: Swing and AWT
 - **Database**: MySQL
-- **IDE**: VS CODE
+- **IDE**: Visual Studio CODE
 
 ## Installation Guide
 
 ### Prerequisites
 - Java Development Kit (JDK) installed
-- VS IDE (or any Java-compatible IDE)
+- Visual Studio IDE (or any Java-compatible IDE)
 - MySQL Server and MySQL Workbench
 
 ### Steps
@@ -38,7 +38,7 @@ This system is ideal for small to medium-sized travel agencies seeking to digiti
    ```
 
 2. **Open in VISUAL STUDIO**
-   - Launch VS CODE.
+   - Launch Visual Studio CODE.
    - Go to `File` > `Open Project`.
    - Browse to the cloned directory and open it.
 
