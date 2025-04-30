@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package travel.management.system;
 
 import java.sql.*;
@@ -150,10 +145,6 @@ Button b5=new Button("Cancel");
 b5.setBounds(140,490,100,30);
 f.add(b5);
 b5.addActionListener(this);
-
-
-
-
 
 
 MenuBar mb=new MenuBar();
