@@ -1,21 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package travel.management.system;
 
-
-import java.awt.BorderLayout;
 import java.awt.*;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
 import net.proteanit.sql.DbUtils;
-
-import javax.swing.JTable;
 import java.sql.*;	
 import javax.swing.*;
 import java.awt.event.ActionListener;
@@ -31,9 +18,6 @@ public class ViewCustomers extends JFrame {
 	private JLabel lblRoomNumber;
 	private JLabel lblId;
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -47,11 +31,12 @@ public class ViewCustomers extends JFrame {
 		});
 	}
 
-        
+    String username;
+	
 	public ViewCustomers() throws SQLException {
 		//conn = Javaconnect.getDBConnection();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(580, 220, 900, 680);
+		setBounds(400, 220, 900, 680);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -75,8 +60,8 @@ public class ViewCustomers extends JFrame {
 		table = new JTable();
 		table.setBounds(0, 40, 900, 350);
 		contentPane.add(table);
-                
-                try{
+               
+		      try{
                     Conn c = new Conn();
                         String displayCustomersql = "select * from customer";
                         ResultSet rs = c.s.executeQuery(displayCustomersql);
@@ -85,6 +70,7 @@ public class ViewCustomers extends JFrame {
                 catch(Exception e1){
                         e1.printStackTrace();
                 }
+			
 		
 		JButton btnNewButton = new JButton("Back");
 		btnNewButton.addActionListener(new ActionListener() {
@@ -94,7 +80,7 @@ public class ViewCustomers extends JFrame {
 		});
 		btnNewButton.setBounds(390, 400, 120, 30);
                 btnNewButton.setBackground(Color.BLACK);
-                btnNewButton.setForeground(Color.WHITE);
+                btnNewButton.setForeground(Color.BLACK);
 		contentPane.add(btnNewButton);
 		
 		lblAvailability = new JLabel("Username");
@@ -138,3 +124,4 @@ public class ViewCustomers extends JFrame {
 	}
 
 }
+
