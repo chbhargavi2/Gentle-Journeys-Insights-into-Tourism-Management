@@ -1,10 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package travel.management.system;
-
 
 import java.awt.Color;
 import java.awt.Container;
@@ -16,10 +10,6 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 import javax.swing.*;
 
-/**
- *
- * @author Prity
- */
 class CreatePackage extends JFrame implements ActionListener{
  
     private Container c;
