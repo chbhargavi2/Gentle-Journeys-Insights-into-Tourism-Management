@@ -1,14 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package travel.management.system;
 
 import java.awt.*;
-import javax.swing.*;
-import java.sql.*;
 import java.awt.event.*;
+import java.sql.*;
+import javax.swing.*;
 import javax.swing.border.*;
 
 public class Signup extends JFrame implements ActionListener{
@@ -103,7 +98,7 @@ public class Signup extends JFrame implements ActionListener{
 	b1.setFont(new Font("Tahoma", Font.BOLD, 13));
 	b1.setBounds(140, 289, 100, 30);
         b1.setBackground(Color.BLACK);
-        b1.setForeground(Color.WHITE);
+        b1.setForeground(Color.GREEN);
 	contentPane.add(b1);
 
 	b2 = new JButton("Back");
@@ -111,7 +106,7 @@ public class Signup extends JFrame implements ActionListener{
 	b2.setFont(new Font("Tahoma", Font.BOLD, 13));
 	b2.setBounds(300, 289, 100, 30);
 	b2.setBackground(Color.BLACK);
-        b2.setForeground(Color.WHITE);
+        b2.setForeground(Color.BLACK);
 	contentPane.add(b2);
 
 	JPanel panel = new JPanel();
