@@ -60,7 +60,7 @@ public class AddCustomer extends JFrame {
 		lblId.setBounds(35, 110, 200, 14);
 		contentPane.add(lblId);
                 
-                comboBox = new JComboBox(new String[] {"Passport", "Aadhar Card", "Voter Id", "Driving license"});
+                comboBox = new JComboBox(new String[] {"Passport", "State Id", "Driving license"});
 		comboBox.setBounds(271, 110, 150, 20);
 		contentPane.add(comboBox);
                 
