@@ -1,17 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package travel.management.system;
-
 
 import java.awt.BorderLayout;
 import java.awt.*;
 import java.awt.EventQueue;
-
 import javax.swing.border.EmptyBorder;
-
 import java.awt.Font;
 import java.awt.Image;
 import java.sql.*;	
@@ -23,9 +15,6 @@ public class UpdateCustomer extends JFrame {
 	PreparedStatement pst = null;
 	private JPanel contentPane;
 	private JTextField t1,t2,t3,t4,t5,t6,t7,t8,t9,t10;
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -41,7 +30,7 @@ public class UpdateCustomer extends JFrame {
 
 	public UpdateCustomer(String username) throws SQLException {
 		System.out.println(username);
-                setBounds(580, 220, 850, 550);
+                setBounds(400, 220, 850, 550);
 		contentPane = new JPanel();
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -158,13 +147,11 @@ public class UpdateCustomer extends JFrame {
                 }catch(Exception e){ }
 		
 		
-
 		JButton btnNewButton = new JButton("Update");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
                             Conn c = new Conn();
-                           
-                          
+                                             
                             try{
 	    			String s1 = t1.getText();
                                 String s2 = t2.getText(); 
@@ -191,7 +178,7 @@ public class UpdateCustomer extends JFrame {
 		});
 		btnNewButton.setBounds(100, 430, 120, 30);
                 btnNewButton.setBackground(Color.BLACK);
-                btnNewButton.setForeground(Color.WHITE);
+                btnNewButton.setForeground(Color.BLACK);
 		contentPane.add(btnNewButton);
 		
 		JButton btnExit = new JButton("Back");
@@ -202,7 +189,7 @@ public class UpdateCustomer extends JFrame {
 		}); 
 		btnExit.setBounds(260, 430, 120, 30);
                 btnExit.setBackground(Color.BLACK);
-                btnExit.setForeground(Color.WHITE);
+                btnExit.setForeground(Color.BLACK);
 		contentPane.add(btnExit);
                 
                 getContentPane().setBackground(Color.WHITE);
