@@ -5,10 +5,8 @@
  */
 package travel.management.system;
 
-import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.io.File;
+import javax.swing.*;
 
 public class CheckHotels extends JFrame implements Runnable {
 
@@ -80,7 +78,7 @@ public class CheckHotels extends JFrame implements Runnable {
 
     public CheckHotels() {
 
-        setBounds(580, 220, 900, 700);
+        setBounds(400, 120, 900, 700);
         getContentPane().setBackground(new Color(220, 250, 250));
         
         th = new Thread(this);
