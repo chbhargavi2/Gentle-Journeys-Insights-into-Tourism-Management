@@ -1,17 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package travel.management.system;
-
 
 import java.awt.BorderLayout;
 import java.awt.*;
 import java.awt.EventQueue;
-
 import javax.swing.border.EmptyBorder;
-
 import java.awt.Font;
 import java.awt.Image;
 import java.sql.*;	
@@ -22,9 +14,7 @@ public class BookPackage extends JFrame {
 	private JPanel contentPane;
         JTextField t1,t2;
         Choice c1,c2,c3;
-	/**
-	 * Launch the application.
-	 */
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -39,7 +29,7 @@ public class BookPackage extends JFrame {
 	}
 
 	public BookPackage(String username) {
-		setBounds(420, 220, 1100, 450);
+		setBounds(300, 220, 1100, 450);
 		contentPane = new JPanel();
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -138,21 +128,21 @@ public class BookPackage extends JFrame {
                             String p = c1.getSelectedItem();
                             int cost = 0;
                             if(p.equals("Gold Package")) {
-                                cost += 12000;
+                                cost += 500;
                             }if(p.equals("Silver Package")){
-                                cost += 25000;
+                                cost += 700;
                             }else if(p.equals("Bronze Package")){
-                                cost += 32000;
+                                cost += 1000;
                             }
                             
                             cost *= Integer.parseInt(t1.getText());
-                            l5.setText("Rs "+cost);
+                            l5.setText("$ "+cost);
                             
                         }
 		});
 		b1.setBounds(50, 350, 120, 30);
                 b1.setBackground(Color.BLACK);
-                b1.setForeground(Color.WHITE);
+                b1.setForeground(Color.BLACK);
 		contentPane.add(b1);
 		
 
@@ -178,7 +168,7 @@ public class BookPackage extends JFrame {
 		});
 		btnNewButton.setBounds(200, 350, 120, 30);
                 btnNewButton.setBackground(Color.BLACK);
-                btnNewButton.setForeground(Color.WHITE);
+                btnNewButton.setForeground(Color.BLACK);
 		contentPane.add(btnNewButton);
 		
 		JButton btnExit = new JButton("Back");
@@ -189,7 +179,7 @@ public class BookPackage extends JFrame {
 		}); 
 		btnExit.setBounds(350, 350, 120, 30);
                 btnExit.setBackground(Color.BLACK);
-                btnExit.setForeground(Color.WHITE);
+                btnExit.setForeground(Color.BLACK);
 		contentPane.add(btnExit);
                 
                 getContentPane().setBackground(Color.WHITE);
