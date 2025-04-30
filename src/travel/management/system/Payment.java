@@ -1,29 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package travel.management.system;
 
-
 import java.awt.Color;
-import java.awt.Container;
 import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
-/**
- *
- * @author Prity
- */
 public class Payment extends JFrame{
     
     public Payment(){
         
         setLayout(null);
-        setBounds(600, 220, 800, 600);
+        setBounds(400, 220, 800, 600);
         
         JLabel label=new JLabel("Pay using Paytm");
         label.setFont(new Font("Raleway", Font.BOLD, 40));
