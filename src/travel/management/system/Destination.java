@@ -1,18 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package travel.management.system;
 
-import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.io.File;
+import javax.swing.*;
 
 public class Destination extends JFrame implements Runnable {
 
     JLabel l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12, l13, l14, l15, l16, l17, l18, l19;
+    JLabel caption;
     Thread th;
 
     public void run() {
@@ -59,21 +53,17 @@ public class Destination extends JFrame implements Runnable {
 
     public Destination() {
 
-        setBounds(580, 220, 900, 700);
+        setBounds(320, 120, 900, 700);
         getContentPane().setBackground(new Color(220, 250, 250));
         
-        th = new Thread(this);
-
-        
+        th = new Thread(this);  
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("travel/management/system/icons/dest1.jpeg"));
         Image i2 = i1.getImage().getScaledInstance(900, 700, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         l2 = new JLabel(i3);
         l2.setBounds(0, 0, 900, 700);
         add(l2);
-
         setLayout(null);
-
         ImageIcon i4 = new ImageIcon(ClassLoader.getSystemResource("travel/management/system/icons/dest2.png"));
         Image i5 = i4.getImage().getScaledInstance(900, 700, Image.SCALE_DEFAULT);
         ImageIcon i6 = new ImageIcon(i5);
