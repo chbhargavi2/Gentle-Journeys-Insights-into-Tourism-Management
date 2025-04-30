@@ -1,17 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package travel.management.system;
-
 
 import java.awt.BorderLayout;
 import java.awt.*;
 import java.awt.EventQueue;
-
 import javax.swing.border.EmptyBorder;
-
 import java.awt.Font;
 import java.awt.Image;
 import java.sql.*;	
@@ -22,9 +14,6 @@ public class BookHotel extends JFrame {
 	private JPanel contentPane;
         JTextField t1,t2;
         Choice c1,c2,c3;
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -39,7 +28,7 @@ public class BookHotel extends JFrame {
 	}
 
 	public BookHotel(String username) {
-		setBounds(420, 220, 1100, 600);
+		setBounds(300, 220, 1100, 600);
 		contentPane = new JPanel();
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -112,8 +101,7 @@ public class BookHotel extends JFrame {
                 c2.add("Non-AC");
                 c2.setBounds(271, 230, 150, 30);
                 add(c2);
-
-                
+     
 		JLabel la6 = new JLabel("Food Included :");
 		la6.setBounds(35, 270, 200, 14);
 		contentPane.add(la6);
@@ -200,7 +188,13 @@ public class BookHotel extends JFrame {
                                         total += foodprice.equals("Yes") ? food : 1;
                                         total += cost;
                                         total = total * persons * days;
-                                        l5.setText("Rs "+total);
+										if(total>1000)
+										{
+										int t = total / 100;
+                                        l5.setText("$ "+t);
+										}
+										else
+										l5.setText("$ "+total);
                                     }
                                     
                                     
@@ -213,7 +207,7 @@ public class BookHotel extends JFrame {
 		});
 		b1.setBounds(50, 470, 120, 30);
                 b1.setBackground(Color.BLACK);
-                b1.setForeground(Color.WHITE);
+                b1.setForeground(Color.BLACK);
 		contentPane.add(b1);
 		
 
@@ -239,7 +233,7 @@ public class BookHotel extends JFrame {
 		});
 		btnNewButton.setBounds(200, 470, 120, 30);
                 btnNewButton.setBackground(Color.BLACK);
-                btnNewButton.setForeground(Color.WHITE);
+                btnNewButton.setForeground(Color.BLACK);
 		contentPane.add(btnNewButton);
 		
 		JButton btnExit = new JButton("Back");
@@ -250,7 +244,7 @@ public class BookHotel extends JFrame {
 		}); 
 		btnExit.setBounds(350, 470, 120, 30);
                 btnExit.setBackground(Color.BLACK);
-                btnExit.setForeground(Color.WHITE);
+                btnExit.setForeground(Color.BLACK);
 		contentPane.add(btnExit);
                 
                 getContentPane().setBackground(Color.WHITE);
