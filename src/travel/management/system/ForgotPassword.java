@@ -1,16 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package travel.management.system;
 
-
 import java.awt.*;
+import java.awt.event.*;
+import java.sql.*;
 import javax.swing.*;
 import javax.swing.border.*;
-import java.sql.*;
-import java.awt.event.*;
 
 public class ForgotPassword extends JFrame implements ActionListener{
 
@@ -107,7 +101,7 @@ public class ForgotPassword extends JFrame implements ActionListener{
 	b1.setFont(new Font("Tahoma", Font.BOLD, 12));
 	b1.setBounds(428, 83, 80, 29);
 	b1.setBackground(Color.BLACK);
-        b1.setForeground(Color.WHITE);
+        b1.setForeground(Color.BLACK);
         contentPane.add(b1);
 
 	b2 = new JButton("Retrieve");
@@ -115,7 +109,7 @@ public class ForgotPassword extends JFrame implements ActionListener{
 	b2.setFont(new Font("Tahoma", Font.BOLD, 12));
 	b2.setBounds(426, 188, 85, 29);
 	b2.setBackground(Color.BLACK);
-        b2.setForeground(Color.WHITE);
+        b2.setForeground(Color.BLACK);
 	contentPane.add(b2);
 
 	b3 = new JButton("Back");
@@ -123,7 +117,7 @@ public class ForgotPassword extends JFrame implements ActionListener{
 	b3.setFont(new Font("Tahoma", Font.BOLD, 13));
 	b3.setBounds(233, 270, 101, 29);
         b3.setBackground(Color.BLACK);
-        b3.setForeground(Color.WHITE);
+        b3.setForeground(Color.BLACK);
 	contentPane.add(b3);
 
 	JPanel panel = new JPanel();
