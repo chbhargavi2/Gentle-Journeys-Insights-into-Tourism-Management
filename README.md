@@ -11,7 +11,7 @@ This system is ideal for small to medium-sized travel agencies seeking to digiti
 ### User Features
 - **User Registration & Login**: Secure authentication for users to access personalized features.
 - **Destination Listings**: View comprehensive information about various tourist destinations.
-- **Tour Package Booking**: Select and book travel packages including transport and accommodation.
+- **Tour Package Booking**: Select and book travel packages including accommodation.
 - **Booking History**: Access records of past bookings and transaction details.
 - **Profile Management**: Update personal details and manage credentials.
 
@@ -53,6 +53,6 @@ This system is ideal for small to medium-sized travel agencies seeking to digiti
 
 5. **Build and Run the Project**
    - Right-click on the project in VISUAL STUDIO.
-   - Then click `Run` file which contains `main.java`.
+   - Then click `Run` file (Login.java).
 
 
