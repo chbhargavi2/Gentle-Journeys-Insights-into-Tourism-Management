@@ -1,8 +1,15 @@
 package travel.management.system;
-
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 
 public class Home extends JFrame{
     String username;
@@ -181,7 +188,7 @@ public class Home extends JFrame{
         m5.setForeground(Color.BLUE);
 	menuBar.add(m5);
         
-        JMenuItem mi12 = new JMenuItem("PAY USING PAYTM");
+        JMenuItem mi12 = new JMenuItem("CARD PAYMENT");
 	m5.add(mi12);
         
         mi12.addActionListener(new ActionListener(){
@@ -229,6 +236,8 @@ public class Home extends JFrame{
                 new About().setVisible(true);
             }
 	});
+        
+        
         
         setExtendedState(JFrame.MAXIMIZED_BOTH); 
 	setVisible(true);
