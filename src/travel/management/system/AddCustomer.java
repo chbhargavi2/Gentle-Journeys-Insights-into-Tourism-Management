@@ -1,10 +1,6 @@
 package travel.management.system;
-import java.awt.BorderLayout;
 import java.awt.*;
-import java.awt.EventQueue;
 import javax.swing.border.EmptyBorder;
-import java.awt.Font;
-import java.awt.Image;
 import java.sql.*;	
 import javax.swing.*;
 import java.awt.event.ActionListener;
@@ -13,10 +9,12 @@ public class AddCustomer extends JFrame {
 	Connection conn = null;
 	PreparedStatement pst = null;
 	private JPanel contentPane;
-	private JTextField t1,t2,t3,t4,t5,t6,t7,t8;
+	private JTextField t1,t2,t6,t7,t8,t5;
         JComboBox comboBox;
+        JComboBox countryComboBox; // Added country combobox declaration
         JRadioButton r1,r2;
         Choice c1;
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -35,13 +33,15 @@ public class AddCustomer extends JFrame {
                 setBounds(380, 200, 850, 550);
 		contentPane = new JPanel();
 		setContentPane(contentPane);
-		contentPane.setLayout(null);            
+		contentPane.setLayout(null);
+                
                 ImageIcon i1  = new ImageIcon(ClassLoader.getSystemResource("travel/management/system/icons/newcustomer.jpg"));
                 Image i3 = i1.getImage().getScaledInstance(450, 500,Image.SCALE_DEFAULT);
                 ImageIcon i2 = new ImageIcon(i3);
                 JLabel l1 = new JLabel(i2);
                 l1.setBounds(450,40,450,420);
-                add(l1);		
+                add(l1);
+		
 		JLabel lblName = new JLabel("NEW CUSTOMER FORM");
 		lblName.setFont(new Font("Yu Mincho", Font.PLAIN, 20));
 		lblName.setBounds(118, 11, 260, 53);
@@ -81,7 +81,8 @@ public class AddCustomer extends JFrame {
 		t2.setBounds(271, 190, 150, 20);
 		contentPane.add(t2);
 		t2.setColumns(10);
-              
+
+                
 		JLabel lblGender = new JLabel("Gender :");
 		lblGender.setBounds(35, 230, 200, 14);
 		contentPane.add(lblGender);
@@ -106,11 +107,12 @@ public class AddCustomer extends JFrame {
 		JLabel lblCountry = new JLabel("Country :");
 		lblCountry.setBounds(35, 270, 200, 14);
 		contentPane.add(lblCountry);
-                
-                t3 = new JTextField();
-		t3.setBounds(271, 270, 150, 20);
-		contentPane.add(t3);
-		t3.setColumns(10);
+
+                // Replace text field with dropdown for country
+                String[] countries = {"Select Country", "India", "USA", "UK", "Canada", "Australia", "Germany", "France", "Japan", "China"};
+                countryComboBox = new JComboBox(countries);
+                countryComboBox.setBounds(271, 270, 150, 20);
+                contentPane.add(countryComboBox);
 		
 		JLabel lblReserveRoomNumber = new JLabel("Permanent Address :");
 		lblReserveRoomNumber.setBounds(35, 310, 200, 14);
@@ -148,7 +150,9 @@ public class AddCustomer extends JFrame {
                         t2.setText(rs.getString("name"));
                     }
                 }catch(Exception e){ }
-			
+		
+		
+
 		JButton btnNewButton = new JButton("Add");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -164,21 +168,27 @@ public class AddCustomer extends JFrame {
                                 JOptionPane.showMessageDialog(null, "Please select gender");
                                 return;
                             }
-                                                
+                           
+                            // Validate country selection
+                            if(countryComboBox.getSelectedIndex() == 0) {
+                                JOptionPane.showMessageDialog(null, "Please select a country");
+                                return;
+                            }
+                          
                             try{
 	    			String s9 = t7.getText(); //username
                                 String s1 = (String)comboBox.getSelectedItem(); 
 	    			String s2 =  t1.getText();
 	    			String s3 =  t2.getText();
                                 String s4 =  radio;
-	    			String s5 =  t3.getText();
+	    			String s5 =  (String)countryComboBox.getSelectedItem(); // Get selected country
 	    			String s7 =  t5.getText();  //address
                                 String s8 =  t6.getText();   //phone
                                 String s10 = t8.getText(); //email
                                 
                                 // Validate required fields
                                 if(s9.equals("") || s2.equals("") || s3.equals("") || 
-                                   s5.equals("") || s7.equals("") || s8.equals("") || s10.equals("")) {
+                                   s7.equals("") || s8.equals("") || s10.equals("")) {
                                     JOptionPane.showMessageDialog(null, "Please fill all required fields");
                                     return;
                                 }
@@ -242,7 +252,7 @@ public class AddCustomer extends JFrame {
         // Method to validate email
         private boolean isValidEmail(String email) {
             // Basic email validation pattern
-            String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
+            String emailRegex = "^[a-zA-Z0-9_+&-]+(?:\\.[a-zA-Z0-9_+&-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
             
             return email.matches(emailRegex);
         }
